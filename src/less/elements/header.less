@@ -1,0 +1,33 @@
+/** Usage example:
+<header class="pg-header -sticky">
+  <div class="container pg-header-content">
+      <a href="#" class="pg-header-logo">My Website</a>
+
+      <nav class="pg-nav" style="display: flex;flex-direction: row;">
+          <ul class="pg-nav-list">
+              <li class="pg-nav-item"><a href="#" class="pg-nav-link">Home</a></li>
+              <li class="pg-nav-item"><a href="#" class="pg-nav-link">About</a></li>
+              <li class="pg-nav-item"><a href="#" class="pg-nav-link">Contact</a></li>
+          </ul>
+      </nav>
+  </div>
+</header>
+ */
+.pg-header {
+  z-index: 50;
+
+  &.-sticky {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.pg-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .pg-nav-list {
+    display: flex;
+  }
+}

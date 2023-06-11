@@ -1,0 +1,55 @@
+
+
+/* Define the column classes */
+.generate-columns(@prefix, @n) when (@n > 0) {
+  .col-@{prefix}@{n} {
+    flex: 0 0 (100% * @n / 12);
+    max-width: (100% * @n / 12);
+  }
+  .generate-columns(@prefix, @n - 1);
+}
+
+/* Generate column classes for all screen sizes */
+.generate-columns(xs-, 12);
+.generate-columns(sm-, 12);
+.generate-columns(md-, 12);
+.generate-columns(lg-, 12);
+
+/* Define the row mixin */
+.row() {
+  display: flex;
+  flex-wrap: wrap;
+  //margin-right: -15px;
+  //margin-left: -15px;
+}
+
+/* Define media queries for different screen sizes */
+@media (max-width: @extra-small) {
+  .row {
+    .generate-columns(xs-, 12);
+    .row();
+  }
+}
+@media (min-width: @small) and (max-width: @medium) {
+  .row {
+    .generate-columns(sm-, 12);
+    .row();
+  }
+}
+@media (min-width: @medium) and (max-width: @large) {
+  .row {
+    .generate-columns(md-, 12);
+    .row();
+  }
+}
+@media (min-width: @large) {
+  .row {
+    .generate-columns(lg-, 12);
+    .row();
+  }
+}
+
+/* Usage example */
+.row {
+  .row(); /* Apply the row mixin */
+}

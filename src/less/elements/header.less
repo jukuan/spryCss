@@ -13,6 +13,7 @@
   </div>
 </header>
  */
+
 .pg-header {
   z-index: 50;
 
@@ -22,12 +23,16 @@
   }
 }
 
+.pg-header.-sticky + .pg-main {
+  margin-top: 80px;
+}
+
 .pg-header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .pg-nav-list {
+  .nav-list {
     display: flex;
   }
 }

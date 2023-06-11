@@ -1,9 +1,10 @@
 {
   "name": "@jukuan/spry-css",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Small, fast CSS framework for modern browsers",
   "main": "webpack.config.js",
   "scripts": {
+    "build": "npx webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Juljan.By",

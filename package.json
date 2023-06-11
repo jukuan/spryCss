@@ -1,6 +1,6 @@
 {
   "name": "@jukuan/spry-css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Small, fast CSS framework for modern browsers",
   "main": "webpack.config.js",
   "scripts": {

@@ -11,9 +11,25 @@
 
 /* Generate column classes for all screen sizes */
 .generate-columns(xs-, 12);
-.generate-columns(sm-, 12);
-.generate-columns(md-, 12);
-.generate-columns(lg-, 12);
+
+.up-small() {
+  .generate-columns(sm-, 12);
+}
+
+.up-middle {
+  .generate-columns(md-, 12);
+}
+
+.up-large() {
+  .generate-columns(lg-, 12);
+}
+
+.down-small() {
+  [class^="col-"] {
+    flex: 0 0 1;
+    max-width: 100%;
+  }
+}
 
 /* Define the row mixin */
 .row() {

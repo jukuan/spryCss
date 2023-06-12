@@ -1,0 +1,40 @@
+/* Define screen size breakpoints */
+@extra-small: 576px;
+@small: 768px;
+@medium: 992px;
+@large: 1200px;
+
+// Mixin for viewport widths greater than or equal to @small
+.up-small(@content) {
+  @media screen and (min-width: @small) {
+    @content();
+  }
+}
+
+// Mixin for viewport widths greater than or equal to @medium
+.up-medium(@content) {
+  @media screen and (min-width: @medium) {
+    @content();
+  }
+}
+
+// Mixin for viewport widths greater than or equal to @large
+.up-large(@content) {
+  @media screen and (min-width: @large) {
+    @content();
+  }
+}
+
+// Mixin for viewport widths less than @medium
+.down-medium(@content) {
+  @media screen and (max-width: (@small - 1)) {
+    @content();
+  }
+}
+
+// Mixin for viewport widths less than @large
+.down-large(@content) {
+  @media screen and (max-width: (@medium - 1)) {
+    @content();
+  }
+}

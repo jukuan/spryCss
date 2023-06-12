@@ -16,6 +16,7 @@
 
 .pg-header {
   z-index: 50;
+  padding: .5em 0;
 
   &.-sticky {
     position: sticky;
@@ -24,7 +25,7 @@
 }
 
 .pg-header.-sticky + .pg-main {
-  margin-top: 80px;
+  //margin-top: 80px;
 }
 
 .pg-header-content {
@@ -33,6 +34,12 @@
   align-items: center;
 
   .nav-list {
-    display: flex;
+    .up-medium() {
+      display: flex;
+    }
+  }
+
+  .down-medium() {
+    padding: 0 2vw;
   }
 }
